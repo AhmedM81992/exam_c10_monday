@@ -1,5 +1,6 @@
 import 'package:exam_c10_monday/design_1/moody_provider.dart';
 import 'package:exam_c10_monday/design_1/slider/image_slider.dart';
+import 'package:exam_c10_monday/design_1/slider/page_indicator.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -82,7 +83,7 @@ class Moody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(width: 300, height: 215, child: ImageSlider())
+                  Container(width: 350, height: 203, child: ImageSlider()),
                 ],
               ),
               SizedBox(height: 25),
