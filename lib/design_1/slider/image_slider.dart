@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 List<String> imgList = [
-  'lib/design_3/assets/images/frame1.png',
-  'lib/design_3/assets/images/frame3.png',
+  'lib/design_1/assets/images/frame2.png',
+  'lib/design_1/assets/images/frame3.png',
+  'lib/design_1/assets/images/frame4.png',
 ];
 
 class ImageSlider extends StatelessWidget {

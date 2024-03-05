@@ -41,6 +41,7 @@ class _PageIndicatorState extends State<PageIndicator> {
           options: CarouselOptions(
               autoPlay: false,
               enlargeCenterPage: true,
+              enableInfiniteScroll: false,
               aspectRatio: 1.8,
               onPageChanged: (index, reason) {
                 setState(() {
