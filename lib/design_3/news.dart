@@ -79,7 +79,7 @@ class News extends StatelessWidget {
                       InkWell(
                         onTap: () {},
                         child: Text(
-                          "See more >",
+                          "See all >",
                           style: TextStyle(
                               color: Color(0xFF6941C6),
                               fontWeight: FontWeight.w600,
