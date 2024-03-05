@@ -17,112 +17,233 @@ class Moody extends StatelessWidget {
         appBar: AppBar(
           leading: Image.asset("lib/design_1/assets/images/logo.png"),
           title: Text("Moody"),
-          actions: [Icon(Icons.notifications)],
+          actions: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: InkWell(onTap: () {}, child: Icon(Icons.notifications)),
+            )
+          ],
         ),
-        body: Expanded(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Text(
-                      "Hello, Sara Rose",
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Text(
-                      "How are y feeling today",
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(12.0),
-                child: Image.asset(
-                  "lib/design_1/assets/images/frame.png",
-                  fit: BoxFit.fitWidth,
-                  alignment: Alignment.center,
-                ),
-              ),
-              Row(
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Feature",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                  Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: () {},
-                      child: Text(
-                        "See more >",
+                  Row(
+                    children: [
+                      Text(
+                        "Hello, ",
                         style: TextStyle(
-                            color: Color(0xFF027A48),
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14),
+                            fontSize: 20, fontWeight: FontWeight.w400),
                       ),
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(width: 350, height: 203, child: ImageSlider()),
-                ],
-              ),
-              SizedBox(height: 25),
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "Exercise",
-                      style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                    ),
-                  ),
-                  Spacer(),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: InkWell(
-                      onTap: () {},
-                      child: Text(
-                        "See more >",
+                      Text(
+                        "Sara Rose",
                         style: TextStyle(
-                            color: Color(0xFF027A48),
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14),
+                            fontSize: 20, fontWeight: FontWeight.bold),
                       ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    "How are you feeling today ?",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  InkWell(
+                    onTap: () {},
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              color: Color(0xFFE4E7EC)),
+                          child: Image.asset(
+                            "lib/design_1/assets/images/face1.png",
+                            scale: 0.8,
+                          ),
+                        ),
+                        Text("Love")
+                      ],
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              color: Color(0xFFE4E7EC)),
+                          child: Image.asset(
+                            "lib/design_1/assets/images/face2.png",
+                            scale: 0.8,
+                          ),
+                        ),
+                        Text("Cool")
+                      ],
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              color: Color(0xFFE4E7EC)),
+                          child: Image.asset(
+                            "lib/design_1/assets/images/face3.png",
+                            scale: 0.8,
+                          ),
+                        ),
+                        Text("Happy")
+                      ],
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 70,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              color: Color(0xFFE4E7EC)),
+                          child: Image.asset(
+                            "lib/design_1/assets/images/face4.png",
+                            scale: 0.8,
+                          ),
+                        ),
+                        Text("sad")
+                      ],
                     ),
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  "lib/design_1/assets/images/component1.png",
-                  alignment: Alignment.center,
-                  scale: 0.8,
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Feature",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                  ),
                 ),
-              ),
-            ],
-          ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Text(
+                      "See more >",
+                      style: TextStyle(
+                          color: Color(0xFF027A48),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(width: 350, height: 203, child: ImageSlider()),
+              ],
+            ),
+            SizedBox(height: 25),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    "Exercise",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                  ),
+                ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Text(
+                      "See more >",
+                      style: TextStyle(
+                          color: Color(0xFF027A48),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 14),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0, top: 8),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      "lib/design_1/assets/images/box1.png",
+                      scale: 0.8,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0, top: 8),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      "lib/design_1/assets/images/box2.png",
+                      scale: 0.8,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0, top: 8),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      "lib/design_1/assets/images/box3.png",
+                      scale: 0.8,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 10.0, top: 8),
+                  child: InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      "lib/design_1/assets/images/box4.png",
+                      scale: 0.8,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
         ),
         bottomNavigationBar: Container(
           height: 90,
