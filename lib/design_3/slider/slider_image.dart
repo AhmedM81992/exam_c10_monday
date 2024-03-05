@@ -44,7 +44,10 @@ class _SliderImageState extends State<SliderImage> {
           items: imageSliders,
           options: CarouselOptions(
               autoPlay: false,
-              enlargeCenterPage: true,
+              enlargeCenterPage: false,
+              padEnds: false,
+              enableInfiniteScroll: false,
+              viewportFraction: 0.985,
               aspectRatio: 1.8,
               onPageChanged: (index, reason) {
                 setState(() {
