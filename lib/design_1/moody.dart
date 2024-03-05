@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Moody extends StatelessWidget {
-  static const String routeName = "PageOne";
+  static const String routeName = "Moody";
   const Moody({super.key});
 
   @override

@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class News extends StatelessWidget {
-  static const String routeName = "PageThree";
+  static const String routeName = "News";
   const News({super.key});
 
   @override
