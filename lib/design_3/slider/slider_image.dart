@@ -23,10 +23,14 @@ class _SliderImageState extends State<SliderImage> {
                 ),
                 child: Stack(
                   children: [
-                    Image.asset(
-                      item,
-                      fit: BoxFit.cover,
-                      width: 1000,
+                    InkWell(
+                      onTap: () {},
+                      child: Image.asset(
+                        item,
+                        fit: BoxFit.cover,
+                        width: 326,
+                        height: 160,
+                      ),
                     ),
                   ],
                 ),

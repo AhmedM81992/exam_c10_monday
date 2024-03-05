@@ -1,7 +1,11 @@
+import 'package:exam_c10_monday/design_3/my_boxs/my_2nd_box.dart';
+import 'package:exam_c10_monday/design_3/my_boxs/my_box.dart';
 import 'package:exam_c10_monday/design_3/news_provider.dart';
-import 'package:exam_c10_monday/design_3/slider/list_for_slider.dart';
-import 'package:exam_c10_monday/design_3/slider/slider_image.dart';
+import 'package:exam_c10_monday/design_3/slider/button_slider/buttons_slider.dart';
+import 'package:exam_c10_monday/design_3/slider/button_slider/list_for_buttons.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,6 +17,7 @@ class News extends StatelessWidget {
   Widget build(BuildContext context) {
     var provider = Provider.of<NewsProvider>(context);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Color(0xFFF9FAFB),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -32,100 +37,62 @@ class News extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Articles, Video, Audio and More...',
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                  borderSide: BorderSide(color: Colors.grey),
-                ),
-                filled: true,
-                fillColor: Colors.grey[200],
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset(
-              "lib/design_3/assets/images/buttons.png",
-              scale: 1.1,
-            ),
-          ),
-          Row(
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          width: 390,
+          height: 747,
+          child: Column(
             children: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Hot topics",
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                child: TextField(
+                  enabled: true,
+                  decoration: InputDecoration(
+                    hintText: 'Articles, Video, Audio and More...',
+                    prefixIcon: Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                      borderSide: BorderSide(color: Colors.grey),
+                    ),
+                    filled: true,
+                    fillColor: Colors.grey[200],
+                  ),
                 ),
               ),
-              Spacer(),
+              ButtonsSlider(buttonsList: buttonsList),
+              Container(width: 350, height: 245, child: My2ndBox()),
+              MyBox(),
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: InkWell(
-                  onTap: () {},
-                  child: Text(
-                    "See more >",
-                    style: TextStyle(
-                        color: Color(0xFF6941C6),
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14),
+                padding: const EdgeInsets.only(top: 20.0),
+                child: Container(
+                  width: 340,
+                  height: 28,
+                  child: Row(
+                    children: [
+                      Text(
+                        "Cycle Phases and Period",
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w600),
+                      ),
+                      Spacer(),
+                      InkWell(
+                        onTap: () {},
+                        child: Text(
+                          "See more >",
+                          style: TextStyle(
+                              color: Color(0xFF6941C6),
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
             ],
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                  width: 350,
-                  height: 203,
-                  child: SliderImage(imgList: imgList)),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              children: [
-                Text(
-                  "Get Tips",
-                  textAlign: TextAlign.left,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                ),
-              ],
-            ),
-          ),
-          Image.asset(
-            "lib/design_3/assets/images/doctor.png",
-            scale: .85,
-          ),
-          Row(
-            children: [
-              Text(
-                "Hot topics",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-              ),
-              Spacer(),
-              InkWell(
-                onTap: () {},
-                child: Text(
-                  "See more >",
-                  style: TextStyle(
-                      color: Color(0xFF6941C6),
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14),
-                ),
-              ),
-            ],
-          ),
-        ],
+        ),
       ),
       bottomNavigationBar: Container(
         height: 90,
@@ -139,6 +106,7 @@ class News extends StatelessWidget {
           showSelectedLabels: true,
           showUnselectedLabels: true,
           unselectedItemColor: Colors.grey,
+          selectedIconTheme: IconThemeData(color: Color(0xFF6941C6), fill: 1),
           items: [
             BottomNavigationBarItem(
                 icon: Icon(Icons.calendar_today_outlined), label: "Today"),
