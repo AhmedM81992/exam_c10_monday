@@ -39,15 +39,18 @@ class MyBox extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Container(
-                        width: 193,
-                        height: 45,
-                        child: Padding(
-                          padding: EdgeInsets.all(1.0),
-                          child: Text(
-                            "Connect with doctors & get suggestions",
-                            style: GoogleFonts.inter(
-                                fontSize: 14, fontWeight: FontWeight.w600),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 193,
+                          height: 45,
+                          child: Padding(
+                            padding: EdgeInsets.all(2.0),
+                            child: Text(
+                              "Connect with doctors & get suggestions",
+                              style: GoogleFonts.inter(
+                                  fontSize: 14, fontWeight: FontWeight.w600),
+                            ),
                           ),
                         ),
                       ),
