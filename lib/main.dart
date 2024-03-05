@@ -3,6 +3,7 @@ import 'package:exam_c10_monday/design_1/moody_provider.dart';
 import 'package:exam_c10_monday/design_1/tabs/home_tab.dart';
 import 'package:exam_c10_monday/design_2/work_out.dart';
 import 'package:exam_c10_monday/design_3/news.dart';
+import 'package:exam_c10_monday/design_3/news_provider.dart';
 import 'package:exam_c10_monday/main_provider.dart';
 import 'package:exam_c10_monday/my_theme_data.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (context) => MainProvider()),
         ChangeNotifierProvider(create: (context) => MoodyProvider()),
+        ChangeNotifierProvider(create: (context) => NewsProvider()),
       ],
       child: const MyApp(),
     ),
